@@ -1,25 +1,13 @@
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import FlowChart from "./FlowChart";
+import StepTypes from "./StepTypes";
 
 function Home() {
   return (
     <div className="App">
       This is the Home page
-    </div>
-  );
-}
-function Flows() {
-  return (
-    <div className="App">
-      This is the flows page
-    </div>
-  );
-}
-function StepTypes() {
-  return (
-    <div className="App">
-      This is the flows page
     </div>
   );
 }
@@ -32,7 +20,7 @@ function FlowSteps() {
 }
 function App() {
   return (
-    <div className="App">
+    <div className="App flex-row">
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/flows">Flows</Link></li>
@@ -41,7 +29,7 @@ function App() {
       </ul>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/flows" element={<Flows />} />
+        <Route path="/flows" element={<FlowChart />} />
         <Route path="/step-types" element={<StepTypes />} />
         <Route path="/flow-steps" element={<FlowSteps />} />
       </Routes>
